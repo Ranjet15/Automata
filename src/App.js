@@ -109,7 +109,7 @@ const MovieListings = () => {
           </div>
         )}
       </div>
-    </div>
+    </div> 
   );
 };
 
