@@ -1,0 +1,20 @@
+.buy-tickets-page{
+    padding: 20px;
+    
+}
+
+.image-style{
+    max-width:30%;
+}
+
+.movie-container{
+    display:flex;
+    padding: 20px 0;
+    flex-wrap: wrap;
+}
+
+.movie-details{
+    padding:0 40px;
+    color:white;
+    flex:1;
+}

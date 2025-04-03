@@ -5,6 +5,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(17, 14, 24);
+  max-width: 1200px; /* Increased to accommodate grid layout */
+  margin: 0 auto;
+  padding: 20px;
 }
 
 code {
