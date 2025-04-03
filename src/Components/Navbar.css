@@ -1,0 +1,16 @@
+.header-navbar{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.navlink-container{
+    display:flex;
+    align-items:center;
+    gap:2rem;
+}
+
+.link{
+    text-decoration: none;
+    color:white;
+}
