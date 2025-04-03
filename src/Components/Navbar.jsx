@@ -9,7 +9,6 @@ export default function Navbar() {
         <img src={logo} alt="App logo"/>
         <nav className='navlink-container'>
           <NavLink className="link" to={'/'}>Home</NavLink>
-          <NavLink className="link">Cart</NavLink>
         </nav>
     </div>
   )
