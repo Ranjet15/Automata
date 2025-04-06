@@ -61,6 +61,13 @@
     margin: 0;
     font-weight: bold;
   }
+
+  .ticket-amount {
+    font-size: 14px;
+    margin: 5px 0 0 0;
+    color: #6b6b6b;
+    text-align: right;
+  }
   
   .ticket-screen {
     font-size: 14px;

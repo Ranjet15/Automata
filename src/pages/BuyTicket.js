@@ -39,7 +39,13 @@ export default function BuyTicket() {
   return (
     <div className="buy-tickets-page">
       <Navbar />
-      {showTicket && <Ticket movieTitle={movie.title} onClose={handleCloseTicket} />}
+      {showTicket && (
+        <Ticket 
+          movieTitle={movie.title} 
+          onClose={handleCloseTicket} 
+          ticketQuantity={ticketQuantity} 
+        />
+      )}
       <div className="section-headers"></div>
       <div className='movie-container'>
         <img src={movie.imageUrl} alt={movie.title} className='image-style' />

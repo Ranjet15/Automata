@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import "./Ticket.css";
 
-export default function Ticket({ movieTitle, onClose }) {
+export default function Ticket({ movieTitle, onClose, ticketQuantity}) {
   const navigate = useNavigate();
 
   const handleClose = () => {
@@ -35,6 +35,10 @@ export default function Ticket({ movieTitle, onClose }) {
           <div className="ticket-section">
             <h2 className="ticket-section-title">Seat</h2>
             <p className="ticket-section-content">PRIME | C18</p>
+          </div>
+
+          <div className="ticket-section">
+            <p className="ticket-amount"> x {ticketQuantity}</p>
           </div>
           
           <button className="ticket-close-button" onClick={handleClose}>
