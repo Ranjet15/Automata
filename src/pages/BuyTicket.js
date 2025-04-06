@@ -3,6 +3,7 @@ import "./BuyTicket.css";
 import Navbar from '../Components/Navbar';
 import { nowShowing, comingSoon } from '../Components/movieData.js'; 
 import { useState } from 'react';
+import Ticket from '../Components/Ticket';
 
 export default function BuyTicket() {
   const { title } = useParams();
@@ -14,6 +15,7 @@ export default function BuyTicket() {
 
   const [ticketQuantity, setTicketQuantity] = useState(1);
   const [totalPrice, setTotalPrice] = useState(movie ? parseFloat(movie.price.replace('₱', '')) : 0);
+  const [showTicket, setShowTicket] = useState(false);
 
   if (!movie) {
     navigate('/');
@@ -27,13 +29,17 @@ export default function BuyTicket() {
   };
 
   const handleBuyTickets = () => {
-    alert(`You have purchased ${ticketQuantity} ticket(s) for ₱${totalPrice.toFixed(2)}. Thank you for your purchase!`);
-    navigate('/');
+    setShowTicket(true);
+  };
+
+  const handleCloseTicket = () => {
+    setShowTicket(false);
   };
 
   return (
     <div className="buy-tickets-page">
       <Navbar />
+      {showTicket && <Ticket movieTitle={movie.title} onClose={handleCloseTicket} />}
       <div className="section-headers"></div>
       <div className='movie-container'>
         <img src={movie.imageUrl} alt={movie.title} className='image-style' />
